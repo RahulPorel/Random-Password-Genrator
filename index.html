@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Genrator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Karla:wght@400;600&family=Noto+Serif:ital@1&family=Orbitron:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Generate a <br />
+        <span> random password </span>
+      </h1>
+      <p>Never use an insecure password again.</p>
+      <div class="form">
+        <form
+          id="passGeneratorForm"
+          class="form"
+          action="characterAmountNumber"
+        >
+          <label class="box" for="characterAmountNumber">Number Of Characters</label>
+          <input
+            type="range" 
+            class="range-1"
+            min="8"
+            max="35"
+            id="characterAmountRange"
+            value="8"
+          />
+          <input class="no-box"
+            type="number"
+            min="8"
+            max="35"
+            id="characterAmountNumber"
+            value="8"
+          />
+          <br />
+          <label class="box" for="includeUppercase">Include Uppercase</label>
+          <input class="box" type="checkbox" id="includeUppercase" />
+        
+          <br />
+          <label class="box"  for="includeNumbers">Include Numbers</label>
+          <input class="box" type="checkbox" id="includeNumbers" />
+          <br />
+          <label class="box" for="includeSymbols">Include Symbols</label>
+          <input  type="checkbox" id="includeSymbols" />
+          <br />
+          <br />
+          <button type="submit" id="generateRandomBtn" class="generate-btn">
+            Generate password
+          </button>
+        </form>
+      </div>
+    </div>
+    <h3 id="password-display" class="passdisplay"></h3>
+  </body>
+</html>
